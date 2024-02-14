@@ -1,0 +1,3 @@
+[submodule "proto-order-develiry"]
+	path = proto-order-develiry
+	url = https://github.com/LadeiraGabriel/proto-order-develiry.git
