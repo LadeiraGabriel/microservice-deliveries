@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package orders;
+
+
+service OrderService {
+  rpc SaveOnTheWayStatus(OrderRequest) returns (Void) {};
+  rpc SaveFinishStatus(OrderRequest) returns (Void) {};
+}
+
+
+message Void {
+
+}
+
+
+message OrderRequest {
+  string orderId = 1;
+
+}
