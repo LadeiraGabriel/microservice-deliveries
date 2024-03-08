@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { DeliveryRespositoryInterface } from 'src/modules/delivery/application/repositories/delivery.repository';
 import { DatabaseModule } from '../../../../shared/infra/database/database.module';
-import { AddOrderToDeliveryUseCase } from 'src/modules/delivery/application/useCases/add-order-to-delivery.use-case';
+import { AddOrderToDeliveryUseCase } from 'src/modules/delivery/application/useCases/add-order-to-delivery-use-case/add-order-to-delivery.use-case';
 import { DeliveryController } from './controllers/delivery.controller';
 
 @Module({

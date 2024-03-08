@@ -5,8 +5,8 @@ type OrderData = {
 export abstract class OrderProvider {
   abstract sendToOrderThatDeliveryHasStarted(
     orderData: OrderData,
-  ): Promise<void>;
+  ): Promise<boolean>;
   abstract sendToOrderThatDeliveryHasBeenCompleted(
     orderData: OrderData,
-  ): Promise<void>;
+  ): Promise<boolean>;
 }

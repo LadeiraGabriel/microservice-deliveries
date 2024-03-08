@@ -2,11 +2,11 @@ import { Module } from '@nestjs/common';
 import { DatabaseModule } from 'src/shared/infra/database/database.module';
 import { HttpDeliveryController } from './controllers/http-delivery.controller';
 import { ProvidersModule } from 'src/shared/infra/providers/providers.module';
-import { StartDeliveryUseCase } from '../../application/useCases/start-delivery.use-case';
-import { FinalizeDeliveryUseCase } from '../../application/useCases/finalize-delivery.use-case';
+import { StartDeliveryUseCase } from '../../application/useCases/start-delivery-use-case/start-delivery.use-case';
+import { FinalizeDeliveryUseCase } from '../../application/useCases/finalize-delivery-use-case/finalize-delivery.use-case';
 import { DeliveryRespositoryInterface } from '../../application/repositories/delivery.repository';
 import { OrderProvider } from '../../application/providers/order-provider';
-import { ListDeliveryByStatusUseCase } from '../../application/useCases/list-delivery-by-status.use-case';
+import { ListDeliveryByStatusUseCase } from '../../application/useCases/list-delivery-by-status-use-case/list-delivery-by-status.use-case';
 
 @Module({
   imports: [DatabaseModule, ProvidersModule],

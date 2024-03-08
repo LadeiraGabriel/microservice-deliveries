@@ -28,19 +28,30 @@ export class OrderGrpcProvider implements OnModuleInit, OrderProvider {
     this.orderGrpcClient = this.client.getService('OrderService');
   }
 
-  async sendToOrderThatDeliveryHasStarted(orderData: OrderData): Promise<void> {
+  async sendToOrderThatDeliveryHasStarted(
+    orderData: OrderData,
+  ): Promise<boolean> {
     const metadata = new Metadata();
-    await lastValueFrom(
-      this.orderGrpcClient.SaveOnTheWayStatus(orderData, metadata),
-    );
+    try {
+      await lastValueFrom(
+        this.orderGrpcClient.SaveOnTheWayStatus(orderData, metadata),
+      );
+      return true;
+    } catch (error) {
+      return false;
+    }
   }
   async sendToOrderThatDeliveryHasBeenCompleted(
     orderData: OrderData,
-  ): Promise<void> {
+  ): Promise<boolean> {
     const metadata = new Metadata();
-
-    await lastValueFrom(
-      this.orderGrpcClient.SaveFinishStatus(orderData, metadata),
-    );
+    try {
+      await lastValueFrom(
+        this.orderGrpcClient.SaveFinishStatus(orderData, metadata),
+      );
+      return true;
+    } catch (error) {
+      return false;
+    }
   }
 }

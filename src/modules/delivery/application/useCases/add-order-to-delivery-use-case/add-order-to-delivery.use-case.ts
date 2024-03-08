@@ -1,6 +1,6 @@
 import { Either, success } from 'src/shared/core/errors/either';
-import { Delivery } from '../entities/delivery.entity';
-import { DeliveryRespositoryInterface } from '../repositories/delivery.repository';
+import { Delivery } from '../../entities/delivery.entity';
+import { DeliveryRespositoryInterface } from '../../repositories/delivery.repository';
 
 export type AddressUserType = {
   district: string;
