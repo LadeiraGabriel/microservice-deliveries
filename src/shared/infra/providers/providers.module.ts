@@ -15,10 +15,7 @@ import { JwtProvider } from './jwt.provider';
         options: {
           url: 'localhost:5050',
           package: 'orders',
-          protoPath: join(
-            __dirname,
-            '../proto-order-delivery/protos/order.proto',
-          ),
+          protoPath: join(__dirname, '../protos/order.proto'),
         },
       },
     ]),
