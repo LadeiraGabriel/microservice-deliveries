@@ -1,14 +1,14 @@
+import { ListDeliveryByStatusUseCase } from '@modules/delivery/application/useCases/list-delivery-by-status-use-case/list-delivery-by-status.use-case';
+import { FinalizeDeliveryUseCase } from '@modules/delivery/application/useCases/finalize-delivery-use-case/finalize-delivery.use-case';
+import { StartDeliveryUseCase } from '@modules/delivery/application/useCases/start-delivery-use-case/start-delivery.use-case';
+import { ResourceNotFoundError } from '@shared/core/errors/generics/resource-not-found.error';
+import { ResourceConflictError } from '@shared/core/errors/generics/resource-conflict.error';
 import { Controller, Get, Param, Patch, Query, Res } from '@nestjs/common';
+import { Role, Roles } from '@shared/infra/http/decorator/role.decorator';
+import { DeliveryViewModel } from '../view-models/delivery.view-model';
+import { ApiQuery, ApiSecurity, ApiTags } from '@nestjs/swagger';
 import { DeliveryDataDto } from '../dto/delivery-data.dto';
 import { Response } from 'express';
-import { StartDeliveryUseCase } from 'src/modules/delivery/application/useCases/start-delivery-use-case/start-delivery.use-case';
-import { FinalizeDeliveryUseCase } from 'src/modules/delivery/application/useCases/finalize-delivery-use-case/finalize-delivery.use-case';
-import { ResourceNotFoundError } from 'src/shared/core/errors/generics/resource-not-found.error';
-import { ResourceConflictError } from 'src/shared/core/errors/generics/resource-conflict.error';
-import { ListDeliveryByStatusUseCase } from 'src/modules/delivery/application/useCases/list-delivery-by-status-use-case/list-delivery-by-status.use-case';
-import { Role, Roles } from 'src/shared/infra/http/decorator/role.decorator';
-import { ApiQuery, ApiSecurity, ApiTags } from '@nestjs/swagger';
-import { DeliveryViewModel } from '../view-models/delivery.view-model';
 
 @Controller('delivery')
 @ApiTags('Deliveries')

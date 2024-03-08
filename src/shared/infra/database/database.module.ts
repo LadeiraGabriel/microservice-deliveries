@@ -1,7 +1,7 @@
+import { DeliveryRespositoryInterface } from '@modules/delivery/application/repositories/delivery.repository';
 import { Module } from '@nestjs/common';
 import { PrismaService } from './prisma/prisma.service';
 import { DeliveryPrismaRepository } from './prisma/repositories/delivery-prisma.repository';
-import { DeliveryRespositoryInterface } from 'src/modules/delivery/application/repositories/delivery.repository';
 
 @Module({
   providers: [

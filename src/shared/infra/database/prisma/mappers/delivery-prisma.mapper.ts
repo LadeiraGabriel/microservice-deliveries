@@ -1,4 +1,4 @@
-import { Delivery } from 'src/modules/delivery/application/entities/delivery.entity';
+import { Delivery } from '@modules/delivery/application/entities/delivery.entity';
 import { Delivery as RawDelivery } from '@prisma/client';
 
 export class DeliveryPrismaMapper {

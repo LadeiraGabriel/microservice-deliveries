@@ -1,5 +1,5 @@
 import { randomUUID } from 'crypto';
-import { Optional } from 'src/helpers/optional';
+import { Optional } from '@helpers/optional';
 
 type DeliveryProps = {
   orderId: string;

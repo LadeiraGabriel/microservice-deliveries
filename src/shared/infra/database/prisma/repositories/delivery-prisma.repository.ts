@@ -1,4 +1,4 @@
-import { Delivery } from 'src/modules/delivery/application/entities/delivery.entity';
+import { Delivery } from '@modules/delivery/application/entities/delivery.entity';
 import { DeliveryRespositoryInterface } from 'src/modules/delivery/application/repositories/delivery.repository';
 import { PrismaService } from '../prisma.service';
 import { Injectable } from '@nestjs/common';

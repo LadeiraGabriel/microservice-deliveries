@@ -1,4 +1,4 @@
-import { Either, failure, success } from 'src/shared/core/errors/either';
+import { Either, failure, success } from '@shared/core/errors/either';
 import { DeliveryRespositoryInterface } from '../../repositories/delivery.repository';
 import { OrderProvider } from '../../providers/order-provider';
 import { ResourceNotFoundError } from 'src/shared/core/errors/generics/resource-not-found.error';

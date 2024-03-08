@@ -1,4 +1,4 @@
-import { Delivery } from 'src/modules/delivery/application/entities/delivery.entity';
+import { Delivery } from '@modules/delivery/application/entities/delivery.entity';
 
 export class DeliveryViewModel {
   static toHttp(delivery: Delivery) {

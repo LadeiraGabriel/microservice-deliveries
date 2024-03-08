@@ -1,4 +1,4 @@
-import { Either, success } from 'src/shared/core/errors/either';
+import { Either, success } from '@shared/core/errors/either';
 import { DeliveryRespositoryInterface } from '../../repositories/delivery.repository';
 import { Delivery } from '../../entities/delivery.entity';
 

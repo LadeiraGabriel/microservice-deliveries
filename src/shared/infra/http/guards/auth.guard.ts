@@ -1,9 +1,9 @@
+import { VerifyAuthorizationUseCase } from '@modules/auth/application/useCase/verify-authorization.use-case';
+import { UnauthorizedError } from '@shared/core/errors/generics/unauthorized.error';
 import { CanActivate, ExecutionContext, Injectable } from '@nestjs/common';
-import { Reflector } from '@nestjs/core';
 import { Request, Response } from 'express';
+import { Reflector } from '@nestjs/core';
 import { Observable } from 'rxjs';
-import { VerifyAuthorizationUseCase } from 'src/modules/auth/application/useCase/verify-authorization.use-case';
-import { UnauthorizedError } from 'src/shared/core/errors/generics/unauthorized.error';
 
 @Injectable()
 export class AuthGuard implements CanActivate {

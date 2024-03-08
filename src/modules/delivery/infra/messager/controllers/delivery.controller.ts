@@ -1,6 +1,6 @@
-import { Controller } from '@nestjs/common';
+import { AddOrderToDeliveryUseCase } from '@modules/delivery/application/useCases/add-order-to-delivery-use-case/add-order-to-delivery.use-case';
 import { MessagePattern, Payload } from '@nestjs/microservices';
-import { AddOrderToDeliveryUseCase } from 'src/modules/delivery/application/useCases/add-order-to-delivery-use-case/add-order-to-delivery.use-case';
+import { Controller } from '@nestjs/common';
 
 @Controller()
 export class DeliveryController {

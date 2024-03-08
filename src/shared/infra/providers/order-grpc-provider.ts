@@ -1,8 +1,8 @@
-import { Metadata } from '@grpc/grpc-js';
+import { OrderProvider } from '@modules/delivery/application/providers/order-provider';
 import { Inject, Injectable, OnModuleInit } from '@nestjs/common';
 import { ClientGrpc } from '@nestjs/microservices';
 import { Observable, lastValueFrom } from 'rxjs';
-import { OrderProvider } from 'src/modules/delivery/application/providers/order-provider';
+import { Metadata } from '@grpc/grpc-js';
 
 interface OrderGrpcClient {
   SaveOnTheWayStatus(
